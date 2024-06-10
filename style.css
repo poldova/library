@@ -1,152 +1,169 @@
 @font-face {
-    font-family: 'ralewaylight';
-    src: url('font/raleway-light-webfont.woff2') format('woff2'),
-         url('font/raleway-light-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-  }
-  
-  * {
-    margin: 0;
-    padding: 0;
-    font-family: 'ralewaylight', system-ui;
-    font-size: 1rem;
-  }
-  
-  input, button {
-    appearance: none;
-    border: 0;
-    outline: none;
-  }
-  
-  .wrapper {
-    display: grid;
-    grid-template: 1fr 9fr / 1fr;
-    justify-content: center;
-    gap: 10px;
-    width: 100%;
-    height: 100vh;
-    margin: 0 auto;
-    overflow: hidden;
-    position: relative;
-    border-style: solid;
-    border-color: rgb(100 100 100 / .2);
-    border-width: 0 1px;
-  }
-  
-  .sidebar {
-    display: grid;
-    padding: 10px;
-    position: absolute;
-    left: 0;
-    bottom: -25rem;
-    right: 0;
-    margin: 1rem;
-    transition: .5s;
-    border-top: 1px solid rgb(100 100 100 / .2);
-    background: rgb(255, 255, 255);
-  }
-  
-  form {
-    display: grid;
-    grid-template: 1fr 5fr / 6fr 1fr;
-    grid-template-areas: "h2 cancel" "info info";
-    align-items: center;
-  }
-  
-  form h2 {
-    grid-area: h2;
-  }
-  
-  .cancel {
-    grid-area: cancel;
-  }
-  
-  .info {
-    display: grid;
-    gap: 10px;
-    grid-area: info;
-  }
-  
-  .pos {
-    bottom: 0;
-  }
-  
-  label[for] {
-    display: grid;
-    grid-auto-flow: column;
-    grid-template-columns: 1rem 10rem;
-    gap: 15px;
-  }
-  
-  input, button {
-    border: 1px solid rgb(100 100 100 / .2);
-    padding: .5rem;
-    position: relative;
-  }
-  
-  input:focus, input:checked {
-    border: 1px solid rgb(0 0 0 / .3);
-  }
-  
-  input[type="checkbox"]:checked::before {
-    position: absolute;
-    content: '✔️';
-    top: 0;
-    left: 0;
-    font-size: .75rem;
-  }
-  
-  button {
-    border: none;
-    border-radius: 3px;
-    margin: auto;
-    padding: .5rem 2rem;
-    background: rgb(100 0 100);
-    color: rgb(250 250 250);
-    cursor: pointer;
-  }
-  
-  .display, .view {
-    display: grid;
-    grid-auto-rows: clamp(40px, 48px, 75px);
-    gap: .5rem;
-    padding: 0 .5rem;
-  }
-
-  .display {
-    overflow-y: scroll;
-    height: 25rem;
-  }
-  
-  .row {
-    display: grid;
-    grid-template-columns: 2fr 2fr repeat(3, 1fr);
-    align-items: center;
-    gap: 5px;
-    border-bottom: 1px solid rgb(100 100 100 / .1);
-  }
-  .row div {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
-  .view > .row:first-child, .title {
-    font-weight: 700;
-  }
-
-  .row>div:nth-child(4) {
-    cursor: pointer;
-  }
-  
-.row button {
-  padding: .3rem .7rem;
-  margin-left: 0;
+  font-family: "ralewaylight";
+  src:
+    url("font/raleway-light-webfont.woff2") format("woff2"),
+    url("font/raleway-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
-  @media screen and (min-width: 900px) {
-    .wrapper {
-      width: 30rem;
-    }
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "ralewaylight", system-ui;
+  font-size: 1rem;
+}
+
+input,
+button {
+  appearance: none;
+  border: 0;
+  outline: none;
+}
+
+.wrapper {
+  display: grid;
+  grid-template: 1fr 9fr / 1fr;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  border-style: solid;
+  border-color: rgb(100 100 100 / 0.2);
+  border-width: 0 1px;
+}
+
+.sidebar {
+  display: grid;
+  padding: 10px;
+  position: absolute;
+  left: 0;
+  bottom: -25rem;
+  right: 0;
+  margin: 1rem;
+  transition: 0.5s;
+  border-top: 1px solid rgb(100 100 100 / 0.2);
+  background: rgb(255, 255, 255);
+}
+
+form {
+  display: grid;
+  grid-template: 1fr 5fr / 6fr 1fr;
+  grid-template-areas: "h2 cancel" "info info";
+  align-items: center;
+}
+
+form h2 {
+  grid-area: h2;
+}
+
+.cancel {
+  grid-area: cancel;
+}
+
+.info {
+  display: grid;
+  gap: 10px;
+  grid-area: info;
+}
+
+.pos {
+  bottom: 0;
+}
+
+label[for] {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1rem 10rem;
+  gap: 15px;
+}
+
+input,
+button {
+  border: 1px solid rgb(100 100 100 / 0.2);
+  padding: 0.5rem;
+  position: relative;
+}
+
+input:focus,
+input:checked {
+  border: 1px solid rgb(0 0 0 / 0.3);
+}
+
+input[type="checkbox"]:checked::before {
+  position: absolute;
+  content: "✔️";
+  top: 0;
+  left: 0;
+  font-size: 0.75rem;
+}
+
+button {
+  border: none;
+  border-radius: 3px;
+  margin: auto;
+  padding: 0.5rem 2rem;
+  background: rgb(100 0 100);
+  color: rgb(250 250 250);
+  cursor: pointer;
+}
+
+.display,
+.view {
+  display: grid;
+  grid-auto-rows: clamp(40px, 48px, 75px);
+  gap: 0.5rem;
+  padding: 0 0.5rem;
+}
+
+.display {
+  overflow-y: auto;
+  height: 25rem;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 2fr 2fr repeat(3, 1fr);
+  align-items: center;
+  gap: 5px;
+  border-bottom: 1px solid rgb(100 100 100 / 0.1);
+}
+.row div {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.view > .row:first-child,
+.title {
+  font-weight: 700;
+}
+
+.display .row > div:nth-child(4),
+.display .row > div:nth-child(5) {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 900px) {
+  .wrapper {
+    width: 30rem;
   }
+}
+
+.display::-webkit-scrollbar {
+  background: transparent;
+  width: 14px;
+}
+
+.display::-webkit-scrollbar-thumb {
+  border: 4px solid transparent;
+  background-clip: content-box;
+  background-color: transparent;
+}
+
+.display:hover::-webkit-scrollbar-thumb {
+  background-color: rgb(144, 144, 144);
+}
